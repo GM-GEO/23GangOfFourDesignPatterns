@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace _23GangOfFourDesignPatterns.Utilities.CustomAttributes
 {
+    /// <summary>
+    /// The ClassNameFriendlyAttribute is used to hold the friendly name of the class.
+    /// </summary>
     [AttributeUsage(AttributeTargets.Class)]
     public class ClassNameFriendlyAttribute : Attribute
     {

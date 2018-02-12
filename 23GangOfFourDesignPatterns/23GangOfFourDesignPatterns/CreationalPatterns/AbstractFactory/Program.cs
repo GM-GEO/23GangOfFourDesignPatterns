@@ -13,17 +13,15 @@ namespace _23GangOfFourDesignPatterns
     {
         static void Main(string[] args)
         {
+            //By initializing a FantasyRealmFactory and instatiating a ForestRealmFactory (which derives FantasyRealmFactory), we make use of the Abstract classes ability to run methods.
+            //Because each concrete factory handles it's own initialization of attackers and defenders, we can use the base method RunBattle without additional code for realm-specific battles.
             FantasyRealmFactory forestRealm = new ForestRealmFactory();
             FantasyRealm fantasyRealm = new FantasyRealm(forestRealm);
             fantasyRealm.RunBattle();
 
-            // Create and run the American animal world
-
             FantasyRealmFactory plainsRealm = new PlainsRealmFactory();
             fantasyRealm = new FantasyRealm(plainsRealm);
             fantasyRealm.RunBattle();
-
-            // Wait for user input
 
             Console.ReadKey();
         }

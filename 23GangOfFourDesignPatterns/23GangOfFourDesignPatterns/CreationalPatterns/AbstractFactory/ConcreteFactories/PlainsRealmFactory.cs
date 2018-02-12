@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace _23GangOfFourDesignPatterns.CreationalPatterns.AbstractFactory.ConcreteFactories
 {
+    /// <summary>
+    /// The PlainsRealmFactory is the concrete implementation of the FantasyRealmFactory and it's methods.
+    /// </summary>
     class PlainsRealmFactory : AbstractFactories.FantasyRealmFactory
     {
         public override Attacker CreateAttacker()
